@@ -69,3 +69,12 @@ You can follow the documentation [here](https://helpcenter.onlyoffice.com/gettin
 
 Note:
 `secret` field refers to the value set for `ONLYOFFICE_JWT_SECRET` in the `.env` file.
+
+
+## Other considerations
+1. Since in the setup nextcloud is behind an nginx proxy you may need to set the values below in the `/var/www/html/config/config.php` in the `app`  
+  * `overwritehost`: set this to the value of `APP_DOMAIN`
+  * `overwriteprotocol`: set this to the request protocol (http/https) depending on whether you have enabled ssl or not.
+  * `allow_local_remote_servers`: set this to (true/false) to allow connection from nextcloud to local servers like onlyoffice if you have a local setup.
+
+You can have a look at the `config.php` file in the repo to guide you.
