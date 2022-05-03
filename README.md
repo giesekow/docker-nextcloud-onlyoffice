@@ -9,10 +9,10 @@ Note: This repo has only been tested on `ubuntu 20.04` and we recommend the same
 2. docker-compose
 3. any editor for editting the files (vim, gedit etc.)
 
-On ubuntu 20.04 install the requirements with:
-`sudo apt-get update && sudo apt-get install -y docker docker-compose vim`
+On ubuntu 20.04 install the requirements with:  
+`sudo apt-get update && sudo apt-get install -y docker docker-compose vim`  
 
-Add current user to `docker` group (ubuntu):
+Add current user to `docker` group (ubuntu):  
 `sudo usermod -aG docker $USER`
 
 You need to logout and login for the changes to take effect before you continue.
@@ -42,8 +42,8 @@ Note care must be take *NOT* to remove the `;` at the end of lines 7 and 41. Thi
 
 
 ### Running the app
-Starting and stoping the application using `docker-compose`
-Start : `docker-compose up -d`
+Starting and stoping the application using `docker-compose`  
+Start : `docker-compose up -d`  
 Stop : `docker-compose down`
 
 ### Running the app (ubuntu and other debain systems)
@@ -51,7 +51,7 @@ Alternative on ubuntu and other linux servers you can use the `start.sh` and `st
 To start the application: `bash start.sh`  
 To stop the application: `bash stop.sh`  
 
-You can also install the application so that it starts automatically when you boot your system.
+You can also install the application so that it starts automatically when you boot your system.  
 `bash install.sh`
 
 ### Permission issues
@@ -59,8 +59,8 @@ In case you have errors which have to do with permission it might be that your u
 
 
 ## Connecting nextcloud and onlyoffice
-To connect nextcloud and onlyoffice you need to install the onlyoffice connector app in nextcloud and configure the app.
-You can follow the documentation [https://helpcenter.onlyoffice.com/gettingstarted/integration/Nextcloud.aspx](here).
+To connect nextcloud and onlyoffice you need to install the onlyoffice connector app in nextcloud and configure the app.  
+You can follow the documentation [here](https://helpcenter.onlyoffice.com/gettingstarted/integration/Nextcloud.aspx).
 
 Note:
 `secret` field refers to the value set for `ONLYOFFICE_JWT_SECRET` in the `.env` file.
