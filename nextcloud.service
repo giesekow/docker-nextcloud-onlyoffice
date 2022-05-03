@@ -1,0 +1,14 @@
+[Unit]
+Description=The Nextcloud Server
+After=docker.service
+Wants=docker.service
+
+[Service]
+WorkingDirectory=$WORKDIR
+ExecStart=$WORKDIR/start.sh
+ExecStop=$WORKDIR/stop.sh
+ExecReload=$WORKDIR/start.sh
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
