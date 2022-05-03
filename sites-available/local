@@ -1,0 +1,60 @@
+map $http_upgrade $connection_upgrade {
+    default upgrade;
+    ''      close;
+}
+
+server {
+    server_name nextcloud.local;
+    
+    location / {
+        proxy_pass http://app:80;
+        proxy_http_version 1.1;
+        proxy_read_timeout 3600s;
+        proxy_set_header X-REAL-IP $remote_addr;
+        proxy_set_header Host $host;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        add_header X-Frontend-Host $host;
+        add_header Strict-Transport-Security "max-age=31536000; includeSubDomains" always;
+        
+        # websocket headers
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection $connection_upgrade;
+    }
+    
+    location ~ /.well-known {
+        allow all;
+    }
+    
+    location /.wel-know/carddav {
+    	return 301 $scheme://$host/remote.php/dav;
+    }
+    
+    location /.wel-know/caldav {
+    	return 301 $scheme://$host/remote.php/dav;
+    }
+
+    listen 80;
+}
+
+server {
+    server_name onlyoffice.local;
+    
+    location / {
+        proxy_pass http://onlyoffice:80;
+        proxy_set_header X-REAL-IP $remote_addr;
+        proxy_set_header Host $host;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        
+        # websocket headers
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection $connection_upgrade;
+    }
+    
+    location ~ /.well-known {
+        allow all;
+    }
+
+    listen 80;
+}
