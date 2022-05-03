@@ -47,9 +47,9 @@ Start : `docker-compose up -d`
 Stop : `docker-compose down`
 
 ### Running the app (ubuntu and other debain systems)
-Alternative on ubuntu and other linux servers you can use the `start.sh` and `stop.sh` scripts to start and stop the application respectively.
-To start the application: `bash start.sh`
-To stop the application: `bash stop.sh`
+Alternative on ubuntu and other linux servers you can use the `start.sh` and `stop.sh` scripts to start and stop the application respectively.  
+To start the application: `bash start.sh`  
+To stop the application: `bash stop.sh`  
 
 You can also install the application so that it starts automatically when you boot your system.
 `bash install.sh`
@@ -59,8 +59,8 @@ In case you have errors which have to do with permission it might be that your u
 
 
 ## Connecting nextcloud and onlyoffice
-To connect nextcloud and onlyoffice you need to install the onlyoffice connector app in nextcloud and configure the app
+To connect nextcloud and onlyoffice you need to install the onlyoffice connector app in nextcloud and configure the app.
 You can follow the documentation [https://helpcenter.onlyoffice.com/gettingstarted/integration/Nextcloud.aspx](here).
 
 Note:
-`secret` field refers to the value to set for `ONLYOFFICE_JWT_SECRET` in the `.env` file.
+`secret` field refers to the value set for `ONLYOFFICE_JWT_SECRET` in the `.env` file.
