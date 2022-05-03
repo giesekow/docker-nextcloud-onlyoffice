@@ -42,13 +42,8 @@ Open the `sites-available/app` and change the server_name fields to match the `O
 Note:  
 * Care must be take *NOT* to remove the `;` at the end of lines 7 and 41. This will make the file unusable.
 
-### Local hosting for testing or local usage
-1. Local hosting is automatically configured in the `sites-available/local` file
-2. Default values are `<APP-URL>=nextcloud.local` and `<ONLYOFFICE-URL>=onlyoffice.local`.
-3. For the local urls to work you need to add them to your `hosts` file and point them to the IP address of the server.
-  * On ubuntu you can run the code below to do that  
-    `sudo cp /etc/hosts /etc/hosts-bk && echo '127.0.0.1 nextcloud.local onlyoffice.local' | sudo tee -a /etc/hosts`  
-4. You can then access nextcloud and onlyoffice on `http://nextcloud.local` and `http://onlyoffice.local`
+### Local testing and development
+1. For the local urls to work you need to add them to your `hosts` file and point them to the IP address of the server.
 
 
 ### Running the app
