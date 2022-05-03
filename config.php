@@ -22,14 +22,15 @@ $CONFIG = array (
   'secret' => '1hWG8nT2nWW77Ggh1D74mPDV5PJ+/o/uQG0ytjtks0977CHL',
   'trusted_domains' => 
   array (
-    0 => 'drive.bonescreen.de',
+    0 => 'nextcloud.example.com',
   ),
   'datadirectory' => '/var/www/html/data',
   'dbtype' => 'mysql',
   'version' => '23.0.4.1',
-  'overwrite.cli.url' => 'https://drive.bonescreen.de',
-  'overwritehost' => 'drive.bonescreen.de',
+  'overwrite.cli.url' => 'https://nextcloud.example.com',
+  'overwritehost' => 'nextcloud.example.com',
   'overwriteprotocol' => 'https',
+  'allow_local_remote_servers' => true,
   'dbname' => 'nextcloud',
   'dbhost' => 'db',
   'dbport' => '',
