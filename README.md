@@ -76,5 +76,5 @@ Note:
   * `overwritehost`: set this to the value of `APP_DOMAIN`
   * `overwriteprotocol`: set this to the request protocol (http/https) depending on whether you have enabled ssl or not.
   * `allow_local_remote_servers`: set this to (true/false) to allow connection from nextcloud to local servers like onlyoffice if you have a local setup.
-  * `skeletondirectory`: set this to the directory which contains the default files and folder which every new user inherits. NB set to empty string to disable this.
+  * `skeletondirectory`: set this to the directory which contains the default files and folder which every new user inherits. NB set to empty string to disable this.  
 You can have a look at the `config.php` file in the repo to guide you.
