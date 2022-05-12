@@ -30,6 +30,7 @@ $CONFIG = array (
   'overwrite.cli.url' => 'https://nextcloud.example.com',
   'overwritehost' => 'nextcloud.example.com',
   'overwriteprotocol' => 'https',
+  'skeletondirectory' => '',
   'allow_local_remote_servers' => true,
   'dbname' => 'nextcloud',
   'dbhost' => 'db',
